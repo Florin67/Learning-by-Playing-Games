@@ -1,0 +1,72 @@
+.learn {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    margin: 0% 25%;
+    margin-bottom: 15px;
+    text-align: left;
+    color: #c1e1ec;
+}
+
+p {
+    margin: 0% 10%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#hoverSI {
+    color: rgb(0, 157, 255);
+}
+#hoverContentSI {
+    display: none;
+    position: fixed;
+    width: 60%;
+    left: 20%;
+    bottom: 50px;
+    padding: 10px;
+    background-color: black;
+    border: solid 5px #ff7700;
+    border-radius: 15px 0px 10px 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(0, 157, 255);
+    text-decoration: none;
+}
+
+#hoverSI:hover #hoverContentSI{
+    display: block;
+}
+
+#finallearn {
+    width: 50%;
+    margin-left: 25%;
+}
+
+#footer {
+    text-align: center;
+    text-decoration: none;
+
+}
+#footer p {
+    font-size: 15px;
+    color: black;
+    margin-top: 10px;
+}
+
+#footer a {
+    font-size: 12px;
+    padding: 0px 20px 10px 20px;
+    color: black;
+}
