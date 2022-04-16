@@ -1,0 +1,77 @@
+.flex-container2 {
+	margin: auto;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	flex-direction: column;
+	padding-top: 25px;
+}
+
+
+.flex-container2 > input[type=text], input[type=password] {
+	background-color: #a2bab6;
+	width: 125px;
+	margin: auto;
+	margin-top: 10px;
+	padding: 7px 0px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	color: #2e403c;
+	box-sizing: border-box;
+	border: 3px solid #5e7a75;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	outline: none;
+}
+
+.flex-container2 > input[type=text]:invalid, input[type=password]:invalid {
+	border: 3px solid #993333;
+	
+}
+
+.flex-container2 > input[type=text]:focus, input[type=password]:focus {
+	border: 3px solid #555;
+	
+}
+
+.flex-container2 > input[type=submit], input[type=button] {
+	background-color: #5e7a75;
+	margin: auto;
+	margin-top: 35px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	color: white;
+	border: 0px;
+}
+
+.flex-container2 > input[type=submit]:hover, input[type=submit]:active, input[type=button]:hover, input[type=button]:active {
+	background-color: #80aba2;
+	color: white;
+}
+
+#logT, #regT {
+	font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #9cb1b8;
+    text-decoration: none;
+	text-align: center;
+	padding-top: 25px;
+}
+
+#regT {
+	padding-top: 10px;
+}
+
+#contentL {
+	border: 3px solid black;
+	width: 250px;
+	margin: auto;
+	text-align: center;
+	align-items: center;
+	padding-bottom: 10px;
+	margin-top: 10%;
+}
