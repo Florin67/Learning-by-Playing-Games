@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width-device-width, initial-scale=1">
         <link href="main.css" rel="stylesheet">
-	<link href="logincss.css" rel="stylesheet">
+	<link href="login.css" rel="stylesheet">
     </head>
     <body>
         <header id="navH">
@@ -21,16 +21,19 @@
                     <li><a href="contact.html">About</a></li>
                 </ul>
             </nav>
-            <a class="cta" href="#"><button>Login</button></a>
+            <a href="login.html"><button>Login</button></a>
         </header>
         <hr>
-	<div id="login" style="height: 50%;">
-			<form class="flex-container2" method="post">  
-				<input type="text" name="name" placeholder="Username">
-				<input type="password" name="password" placeholder="Password">
-				<input type="submit" name="login" value="Login">
-				<input type="button" value="Register" onclick="toRegister()"> 
-			</form>
-			</div>
+        <div id="contentL">
+            <div id="login" style="height: 50%;">
+                <form class="flex-container2" method="post">  
+                    <input type="text" name="name" placeholder="Username">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="submit" name="login" value="Login">
+                </form>
+                
+                <p id="logT">New to this platform? <br> <a href="register.html">Register</a></p>
+            </div>
+        </div>
     </body>
 </html>
