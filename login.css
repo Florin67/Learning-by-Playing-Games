@@ -10,7 +10,7 @@
 
 
 .flex-container2 > input[type=text], input[type=password] {
-	background-color: #a2bab6;
+	background-color: rgba(225,225,225,1);
 	width: 125px;
 	margin: auto;
 	margin-top: 10px;
@@ -20,7 +20,7 @@
 	display: inline-block;
 	color: #2e403c;
 	box-sizing: border-box;
-	border: 3px solid #5e7a75;
+	border: 3px solid rgba(0,136,169,1);
 	-webkit-transition: 0.5s;
 	transition: 0.5s;
 	outline: none;
@@ -37,7 +37,7 @@
 }
 
 .flex-container2 > input[type=submit], input[type=button] {
-	background-color: #5e7a75;
+	background-color: rgba(0,136,169,1);
 	margin: auto;
 	margin-top: 35px;
 	padding: 10px 20px;
@@ -46,10 +46,13 @@
 	display: inline-block;
 	color: white;
 	border: 0px;
+	border-radius: 50px;
+    	cursor: pointer;
+    	transition: all 0.3s ease 0s
 }
 
 .flex-container2 > input[type=submit]:hover, input[type=submit]:active, input[type=button]:hover, input[type=button]:active {
-	background-color: #80aba2;
+	background-color: rgba(0,136,169,0.8);
 	color: white;
 }
 
