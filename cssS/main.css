@@ -7,12 +7,16 @@
 }
 
 
-li, a, #button, .home, .about, .contact {
+li, a, .button, .home, .about, .contact {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
+}
+
+.home {
+	padding: 20px 0px;
 }
 
 .contact, .about , .home h1, h3{
@@ -21,33 +25,44 @@ li, a, #button, .home, .about, .contact {
 
 #navH {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 30px 10%;
+    padding: 20px 10%;
+	width: 100%;
 }
 
 .logo {
     cursor: pointer;
 }
 
+.nav_main2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .nav_main {
-    list-style: none;
+    display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
-.nav_main li {
+.nav_main li, .nav_main2 li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 5px 20px;
 }
 
-.nav_main li a {
+.nav_main li a, .nav_main2 li a {
     transition: all 0.3s ease 0s;
 }
 
-.nav_main li a:hover {
+.nav_main li a:hover, .nav_main2 li a:hover {
     color: #0088a9;
 }
 
-#button {
+.button {
     padding: 9px 25px;
     background-color: rgba(0,136,169,1);
     border: none;
@@ -57,16 +72,23 @@ li, a, #button, .home, .about, .contact {
 
 }
 
-#button:hover {
+.button:hover {
     background-color: rgba(0,136,169,0.8);
 }
 
 .top_10 {
-    position: fixed;
-    width: 200px;
+    width: 100%;
     border: 3px solid;
     right: 20px;
     top: 200px;
+	padding: 10px 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav_main {display: flex; flex-direction: row;}
+  .home {width: 75%;}
+  .top_10 {position: fixed; width: 200px; padding: 0px 0px;}
+  .menu_phone {display: none;}
 }
 
 .top_10 * {

@@ -7,22 +7,46 @@
         <meta name="description" content="">
         <meta name="viewport" content="width-device-width, initial-scale=1">
         <link href="../cssS/main.css" rel="stylesheet">
+		<link href="../cssS/game.css" rel="stylesheet">
     </head>
     <body>
         <header id="navH">
             <img class="logo" src="../images/logo.png" alt="logo">
-            <nav>
-                <ul class="nav_main">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../htmlP/learn.html">Learn</a></li>
-                    <li><a href="../htmlP/play.html">Play</a></li>
-                    <li><a href="../htmlP/leaderboard.html">Leaderboard</a></li>
-                    <li><a href="../htmlP/contact.html">About</a></li>
-                </ul>
-            </nav>
-            <a href="../htmlP/login.html" id="button">Login</a>
+            <ul class="nav_main">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../htmlP/learn.html">Learn</a></li>
+                <li><a href="../htmlP/play.html">Play</a></li>
+                <li><a href="../htmlP/leaderboard.html">Leaderboard</a></li>
+                <li><a href="../htmlP/contact.html">About</a></li>
+            </ul>
+            <a href="../htmlP/login.html" class="button">Login</a>
         </header>
         <hr>
+		<div class="menu_phone" style="border: 3px solid;">
+			<ul class="nav_main2">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../htmlP/learn.html">Learn</a></li>
+                <li><a href="../htmlP/play.html">Play</a></li>
+                <li><a href="../htmlP/leaderboard.html">Leaderboard</a></li>
+                <li><a href="../htmlP/contact.html">About</a></li>
+            </ul>
+		</div>
+		
+		<div class="game_box">
+			<form class="form-container" method="get">
+			<div class="flex-container">
+				<p class="questions-left">Question 1 out of 10</p>
+				<p class="score">Score: 50</p>
+			</div>
+			<p class="question">Question1</p>
+            <input type="radio" name="answer" value="answer1"><label>Answer1</label><br><br>
+            <input type="radio" name="answer" value="answer2"><label>Answer2</label><br><br>
+            <input type="radio" name="answer" value="answer3"><label>Answer3</label><br><br>
+			<input type="radio" name="answer" value="answer4"><label>Answer4</label><br><br>
+            <input class="button" type="submit" name="next" value="Next" >
+            </form>
+		</div>
+		
         <div class="top_10">
             <header id="top10">
                 <h1>Top 10</h1>
