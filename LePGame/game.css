@@ -1,0 +1,117 @@
+.container-start {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+
+    text-align: center;
+    position: relative;
+    width: 60%;
+    border: 3px solid black;
+    left: 10%;
+    top: 50px;
+}
+.container {
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: auto;
+    padding: 2rem;
+}
+
+
+.choices {
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    min-width: 50vw;
+}
+#score {
+    margin-bottom: 20px;
+}
+
+#question {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.choices:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.choice-pref {
+    padding: 1rem 1.25rem;
+    color: white;
+    background-color: rgb(18, 92, 255);
+    border-radius: 5px 0px 0px 5px;
+}
+
+.choice-text {
+    padding: 1rem;
+    width: 100%;
+    background-color: rgb(18, 92, 255);
+    border-radius: 0px 5px 5px 0px;
+}
+
+.correct * {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+}
+.incorrect * {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.hud-main-text {
+    text-align: center;
+}
+
+#progressBAR {
+    width: 15rem;
+    height: 1.5rem;
+    border: 0.2rem solid rgb(11, 223, 36);
+    margin-top: 20px;
+    margin-bottom: 35px;
+    border-radius: 50px;
+    overflow: hidden;
+    align-self: center;
+}
+
+#progressBARfull {
+    height: 100%;
+    background: rgb(11, 223, 36);
+    width: 0%;
+}
+
+@media screen and (max-width: 920px) {
+    .choices {
+        min-width: 19rem;
+    }
+    .choice-pref {
+        padding: 1rem;
+        margin: auto;
+    }
+    .container-start {
+        width: 80%;
+    }
+    .container {
+        width: 60vw;
+    }
+
+}
