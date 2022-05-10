@@ -1,0 +1,71 @@
+
+.container-start {
+    text-align: center;
+    position: relative;
+    width: 60%;
+    border: 3px solid black;
+    left: 10%;
+    top: 50px;
+}
+
+.container {
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+    margin-top: auto;
+    padding: 2rem;
+}
+
+#finalScore {
+    font-size: 4rem;
+    color: #edf0f1;
+}
+
+#finalSPT {
+    margin-bottom: 30px;
+    color: #edf0f1;
+}
+
+
+
+.btn {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #edf0f1;
+    text-decoration: none;
+    padding: 9px 25px;
+
+    margin: 0 20px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 114, 244, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+@media screen and (max-width: 920px) {
+    .container-start {
+        width: 80%;
+    }
+    .container {
+        width: 60vw;
+    }
+}
