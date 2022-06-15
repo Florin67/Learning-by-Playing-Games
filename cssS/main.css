@@ -15,6 +15,15 @@
     }
 }
 
+nav #icon {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+
 li, a, #button, .home, .about, .contact {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;

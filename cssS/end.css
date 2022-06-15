@@ -38,9 +38,9 @@
     font-size: 25px;
     color: #edf0f1;
     text-decoration: none;
-    padding: 9px 25px;
 
-    margin: 0 20px;
+    margin: 0;
+    padding: 1rem;
     background-color: rgba(0,136,169,1);
     border: none;
     border-radius: 50px;
