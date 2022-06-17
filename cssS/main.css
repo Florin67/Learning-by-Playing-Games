@@ -6,21 +6,22 @@
     background-color: #24252A;
 }
 
-@media screen and (max-width: 920px) {
-    .top_10 {
-        display: none;
-    }
-    .logo {
-        display: none;
-    }
-}
-
 nav #icon {
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
     float: right;
     cursor: pointer;
+    display: none;
+}
+
+nav .menu-btn i{
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+input[type="checkbox"]{
     display: none;
 }
 
@@ -40,7 +41,7 @@ li, a, #button, .home, .about, .contact {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 30px 2%;
 }
 
 .logo {
@@ -166,4 +167,55 @@ tbody .nickname {
     padding: 0% 5%;
     padding-bottom: 10px;
     width: 100%;
+}
+
+
+@media (max-width: 1000px){
+    nav{
+      padding: 0 40px 0 50px;
+    }
+}
+@media (max-width: 920px) {
+    .top_10 {
+        display: none;
+    }
+    nav .menu-btn i{
+        display: block;
+    }
+    #click:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #24252A;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    #click:checked ~ ul{
+        left: 0;
+    }
+    nav ul li{
+        width: 100%;
+        margin: 40px 0;
+    }
+    nav ul li a{
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked ~ ul li a{
+        margin-left: 0px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover{
+        background: none;
+        color: cyan;
+    }
 }
