@@ -7,22 +7,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width-device-width, initial-scale=1">
         <link href="../cssS/main.css" rel="stylesheet">
-	<link href="../cssS/login.css" rel="stylesheet">
+	    <link href="../cssS/login.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     </head>
     <body>
-        <header id="navH">
+        <nav id="navH">
             <img class="logo" src="../images/logo.png" alt="logo">
-            <nav>
-                <ul class="nav_main">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../htmlP/learn.html">Learn</a></li>
-                    <li><a href="../htmlP/play.html">Play</a></li>
-                    <li><a href="../htmlP/leaderboard.html">Leaderboard</a></li>
-                    <li><a href="../htmlP/contact.html">About</a></li>
-                </ul>
-            </nav>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+            <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav_main">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../htmlP/learn.html">Learn</a></li>
+                <li><a href="../htmlP/play.html">Play</a></li>
+                <li><a href="../htmlP/leaderboard.html">Leaderboard</a></li>
+                <li><a href="../htmlP/contact.html">About</a></li>
+            </ul>
             <a href="../htmlP/login.html" id="button">Login</a>
-        </header>
+        </nav>
         <hr>
         <div id="contentL" style="height: 50%;">
            <p id="regT">Join Us!</p>
@@ -35,4 +38,3 @@
         </div>
     </body>
 </html>
-../php/registration.php
