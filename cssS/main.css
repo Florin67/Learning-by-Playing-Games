@@ -50,6 +50,7 @@ li, a, #button, .home, .about, .contact {
 
 .nav_main {
     list-style: none;
+    z-index: 200;
 }
 
 .nav_main li {
