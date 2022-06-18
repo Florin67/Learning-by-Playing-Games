@@ -6,24 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../cssS/end.css">
     <link rel="stylesheet" href="../cssS/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<script src="../jsF/user.js"></script>
     <title>Quiz</title>
 </head>
-<body>
+<body onload="checklogin(); read('../php/read.php')">
     <nav id="navH">
-        <img class="logo" src="../images/logo.png" alt="logo">
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
+		<input type="checkbox" id="click">
+		<label for="click" class="menu-btn">
         <i class="fas fa-bars"></i>
-        </label>
-        <ul class="nav_main">
+		</label>
+        <img class="logo" src="../images/logo.png" alt="logo">
+		<ul class="nav_main">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../htmlP/learn.html">Learn</a></li>
-            <li><a href="../htmlP/play.html">Play</a></li>
-            <li><a href="../htmlP/leaderboard.html">Leaderboard</a></li>
-            <li><a href="../htmlP/contact.html">About</a></li>
+            <li><a href="./learn.html">Learn</a></li>
+            <li><a href="./play.html">Play</a></li>
+            <li><a href="./leaderboard.html">Leaderboard</a></li>
+            <li><a href="./contact.html">About</a></li>
         </ul>
-        <a href="../htmlP/login.html" id="button">Login</a>
+		<a href="./login.html" id="button">Login</a>
+		<div id="logged" style="display:none">
+			<div id="logged-user"></div>
+			<div id="logtext">Score: 0</div>
+			<button id="logout" onclick="logout()">Logout</button>
+		</div>
     </nav>
     <hr>
 
@@ -32,7 +38,10 @@
             <div id="end" class="flex-center flex-column">
                 <h1 id="finalScore">0</h1>
                 <h2 id="finalSPT">Score Points</h2>
-                <a href="../LePGame/game.html" class="btn">Play Again</a>
+				<div id="btns">
+					<a href="../LePGame/game.html" class="btn">Play Again</a>
+					<a href="../htmlP/learn.html" class="btn">Quit Game</a>
+				</div>
             </div>
         </div>
     </div>
@@ -45,60 +54,10 @@
         <table>
             <tr>
                 <th class="rank">#</th>
-                <th class="nickname">NickName</th>
+                <th class="nickname">Username</th>
                 <th class="sp">Score</th>
             </tr>
-            <tbody>
-                <tr>
-                    <td class="rank">1</td>
-                    <td class="nickname">Florin</td>
-                    <td class="sp">143.5</td>
-                </tr>
-                <tr>
-                    <td class="rank">2</td>
-                    <td class="nickname">MarcelPavel</td>
-                    <td class="sp">46</td>
-                </tr>
-                <tr>
-                    <td class="rank">3</td>
-                    <td class="nickname">clejanca</td>
-                    <td class="sp">intelect</td>
-                </tr>
-                <tr>
-                    <td class="rank">4</td>
-                    <td class="nickname"></td>
-                    <td class="sp"></td>
-                </tr>
-                <tr>
-                    <td class="rank">5</td>
-                    <td class="nickname"></td>
-                    <td class="sp"></td>
-                </tr>
-                <tr>
-                    <td class="rank">6</td>
-                    <td class="nickname"></td>
-                    <td class="sp"></td>
-                </tr>
-                <tr>
-                    <td class="rank">7</td>
-                    <td class="nickname"></td>
-                    <td class="sp"></td>
-                </tr>
-                <tr>
-                    <td class="rank">8</td>
-                    <td class="nickname"></td>
-                    <td class="sp"></td>
-                </tr>
-                <tr>
-                    <td class="rank">9</td>
-                    <td class="nickname"></td>
-                    <td class="sp"></td>
-                </tr>
-                <tr>
-                    <td class="rank">10</td>
-                    <td class="nickname"></td>
-                    <td class="sp"></td>
-                </tr>
+            <tbody id="leaderboard">
             </tbody>
         </table>
     </div>

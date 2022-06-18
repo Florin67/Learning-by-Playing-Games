@@ -5,36 +5,42 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Learning by Playing Games</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../cssS/main.css" rel="stylesheet">
 	    <link href="../cssS/login.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<script src="../jsF/user.js"></script>
     </head>
-    <body>
+    <body onload="checklogin()">
         <nav id="navH">
-            <img class="logo" src="../images/logo.png" alt="logo">
-            <input type="checkbox" id="click">
-            <label for="click" class="menu-btn">
+			<input type="checkbox" id="click">
+			<label for="click" class="menu-btn">
             <i class="fas fa-bars"></i>
-            </label>
-            <ul class="nav_main">
+			</label>
+            <img class="logo" src="../images/logo.png" alt="logo">
+			<ul class="nav_main">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../htmlP/learn.html">Learn</a></li>
-                <li><a href="../htmlP/play.html">Play</a></li>
-                <li><a href="../htmlP/leaderboard.html">Leaderboard</a></li>
-                <li><a href="../htmlP/contact.html">About</a></li>
+                <li><a href="./learn.html">Learn</a></li>
+                <li><a href="./play.html">Play</a></li>
+                <li><a href="./leaderboard.html">Leaderboard</a></li>
+                <li><a href="./contact.html">About</a></li>
             </ul>
-            <a href="../htmlP/login.html" id="button">Login</a>
+			<a href="./login.html" id="button">Login</a>
+			<div id="logged" style="display:none">
+				<div id="logged-user"></div>
+				<div id="logtext">Score: 0</div>
+				<button id="logout" onclick="logout()">Logout</button>
+			</div>
         </nav>
         <hr>
         <div id="contentL">
             <div id="login" style="height: 50%;">
-                <form class="flex-container2" method="post">  
-                    <input type="text" name="name" placeholder="Username">
-                    <input type="password" name="password" placeholder="Password">
-                    <input type="submit" name="login" value="Login">
-                </form>
-                
+                <div class="flex-container2">  
+                    <input type="text" id="username" placeholder="Username">
+                    <input type="password" id="password" placeholder="Password">
+                    <button onclick="authUser()">Login</button>
+					<p id="form_message" style="display:none">Message</p>
+                </div>
                 <p id="logT">New to this platform? <br> <a href="register.html">Register</a></p>
             </div>
         </div>

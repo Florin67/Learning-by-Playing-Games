@@ -36,7 +36,7 @@
 	
 }
 
-.flex-container2 > input[type=submit], input[type=button] {
+.flex-container2 > input[type=submit], input[type=button], button {
 	background-color: rgba(0,136,169,1);
 	margin: auto;
 	margin-top: 35px;
@@ -47,16 +47,16 @@
 	color: white;
 	border: 0px;
 	border-radius: 50px;
-    	cursor: pointer;
-    	transition: all 0.3s ease 0s
+    cursor: pointer;
+    transition: all 0.3s ease 0s
 }
 
-.flex-container2 > input[type=submit]:hover, input[type=submit]:active, input[type=button]:hover, input[type=button]:active {
+.flex-container2 > input[type=submit]:hover, input[type=submit]:active, input[type=button]:hover, input[type=button]:active, button:hover, button:active {
 	background-color: rgba(0,136,169,0.8);
 	color: white;
 }
 
-#logT, #regT {
+#logT, #regT, .flex-container2 > #form_message {
 	font-family: "Montserrat", sans-serif;
     font-size: 14px;
     color: #9cb1b8;
@@ -78,3 +78,4 @@
 	padding-bottom: 10px;
 	margin-top: 10%;
 }
+

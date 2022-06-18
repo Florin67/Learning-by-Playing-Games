@@ -15,6 +15,10 @@ nav #icon {
     display: none;
 }
 
+.menu-btn {
+	display: none;
+}
+
 nav .menu-btn i{
     color: #fff;
     font-size: 22px;
@@ -25,12 +29,20 @@ input[type="checkbox"]{
     display: none;
 }
 
-li, a, #button, .home, .about, .contact {
+li, a, #button, .home, .about, .contact, #logout {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
+}
+
+#logtext, #logged-user {
+	font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #9cb1b8;
+    text-decoration: none;
+	text-align: center;
 }
 
 .contact, .about , .home h1, h3{
@@ -46,6 +58,7 @@ li, a, #button, .home, .about, .contact {
 
 .logo {
     cursor: pointer;
+	display: block;
 }
 
 .nav_main {
@@ -66,7 +79,7 @@ li, a, #button, .home, .about, .contact {
     color: #0088a9;
 }
 
-#button {
+#button, #logout {
     padding: 9px 25px;
     background-color: rgba(0,136,169,1);
     border: none;
@@ -76,7 +89,7 @@ li, a, #button, .home, .about, .contact {
 
 }
 
-#button:hover {
+#button:hover, #logout:hover {
     background-color: rgba(0,136,169,0.8);
 }
 
@@ -170,7 +183,11 @@ tbody .nickname {
     width: 100%;
 }
 
-
+@media (max-width: 380px){
+    .logo {
+      display: none;
+    }
+}
 @media (max-width: 1000px){
     nav{
       padding: 0 40px 0 50px;
@@ -188,7 +205,7 @@ tbody .nickname {
     }
     nav ul{
         position: fixed;
-        top: 80px;
+        top: 100px;
         left: -100%;
         background: #24252A;
         height: 100vh;
@@ -219,4 +236,7 @@ tbody .nickname {
         background: none;
         color: cyan;
     }
+	.menu-btn {
+		display:block;
+	}
 }

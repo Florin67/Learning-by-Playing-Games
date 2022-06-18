@@ -5,26 +5,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Learning by Playing gamesL</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width-device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../cssS/main.css" rel="stylesheet">
         <link href="../cssS/leaderboard.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+		<script src="../jsF/user.js"></script>
     </head>
-    <body>
+    <body onload="checklogin(); loadLeaderboard()">
         <nav id="navH">
-            <img class="logo" src="../images/logo.png" alt="logo">
-            <input type="checkbox" id="click">
-            <label for="click" class="menu-btn">
+			<input type="checkbox" id="click">
+			<label for="click" class="menu-btn">
             <i class="fas fa-bars"></i>
-            </label>
-            <ul class="nav_main">
+			</label>
+            <img class="logo" src="../images/logo.png" alt="logo">
+			<ul class="nav_main">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../htmlP/learn.html">Learn</a></li>
-                <li><a href="../htmlP/play.html">Play</a></li>
-                <li><a href="../htmlP/leaderboard.html">Leaderboard</a></li>
-                <li><a href="../htmlP/contact.html">About</a></li>
+                <li><a href="./learn.html">Learn</a></li>
+                <li><a href="./play.html">Play</a></li>
+                <li><a href="./leaderboard.html">Leaderboard</a></li>
+                <li><a href="./contact.html">About</a></li>
             </ul>
-            <a href="../htmlP/login.html" id="button">Login</a>
+			<a href="./login.html" id="button">Login</a>
+			<div id="logged" style="display:none">
+				<div id="logged-user"></div>
+				<div id="logtext">Score: 0</div>
+				<button id="logout" onclick="logout()">Logout</button>
+			</div>
         </nav>
         <hr>
 
@@ -35,71 +41,12 @@
             <table>
                 <tr>
                     <th class="rankL">#</th>
-                    <th class="nicknameL">Nickname</th>
+                    <th class="nicknameL">Username</th>
                     <th class="spL">Score</th>
                     <th class="gamesL">Played Matches</th>
                 </tr>
-                <tbody>
-                    <tr>
-                        <td class="rankL">1</td>
-                        <td class="nicknameL">Florin</td>
-                        <td class="spL">143.5</td>
-                        <td class="gamesL">2</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">2</td>
-                        <td class="nicknameL">MarcelPavel</td>
-                        <td class="spL">46</td>
-                        <td class="gamesL">1</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">3</td>
-                        <td class="nicknameL">clejanca</td>
-                        <td class="spL">intelect</td>
-                        <td class="gamesL">0</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">4</td>
-                        <td class="nicknameL">new entry</td>
-                        <td class="spL">X</td>
-                        <td class="gamesL">0</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">5</td>
-                        <td class="nicknameL">new entry</td>
-                        <td class="spL">X</td>
-                        <td class="gamesL">0</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">6</td>
-                        <td class="nicknameL">new entry</td>
-                        <td class="spL">X</td>
-                        <td class="gamesL">0</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">7</td>
-                        <td class="nicknameL">new entry</td>
-                        <td class="spL">X</td>
-                        <td class="gamesL">0</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">8</td>
-                        <td class="nicknameL">new entry</td>
-                        <td class="spL">X</td>
-                        <td class="gamesL">0</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">9</td>
-                        <td class="nicknameL">new entry</td>
-                        <td class="spL">X</td>
-                        <td class="gamesL">0</td>
-                    </tr>
-                    <tr>
-                        <td class="rankL">10</td>
-                        <td class="nicknameL">new entry</td>
-                        <td class="spL">X</td>
-                        <td class="gamesL">0</td>
-                    </tr>
+                <tbody id="leaderboard2">
+                    
                 </tbody>
             </table>
         </div>
