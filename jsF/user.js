@@ -91,7 +91,8 @@ xhr.send(JSON.stringify(data));
 
 function checkscore() {
 	var xhr = new XMLHttpRequest();
-	var url = "http://localhost/Learning-by-Playing-Games-main/php/score.php";
+	var base_url = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname.split('/')[1];
+	var url = base_url + "/php/score.php";
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.onreadystatechange = function () {
