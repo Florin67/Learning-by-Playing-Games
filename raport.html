@@ -64,10 +64,10 @@
 				<ul>
 					<li>Users should be able to log in on an account.</li>
 					<li>Users should be able to register an account.</li>
-					<li>Users should be able to start a quiz game (even without an account).</li>
+					<li>Users should be able to start a quiz game.</li>
 					<li>The application should provide a wiki</li>
 					<li>The application should provide a leaderboard.</li>
-					<li>The application should provide the quiz questions.</li>
+					<li>The application should update a player's info after a game.</li>
 				</ul>
 			</section>
 			<section id="user-interfaces">
@@ -76,17 +76,18 @@
 				
 				<ul>
 					<li>The menu with all the pages is in the header.</li>
-					<li>The Home and Play page will have a similar interface, with a leaderboard to the side showing top-10 users.</li>
+					<li>The Home and Play page will have a similar interface, with a leaderboard to the side showing top-10 users by their total score.</li>
 					<li>The Login page will handle the login/register form.</li>
-					<li>The Leaderboard page should display all/a part of the users.</li>
+					<li>The Leaderboard page should display all/a part of the users with their respective total score and played matches.</li>
 					<li>The Learn and About page will contain reading information.</li>
 					<li>The Play page will contain the game.</li>
+					<li>The game will be a quiz game with 5 questions and 3 possible answers and by the end it should provide a score.</li>
 				</ul>
 			</section>
 			<section id="soft-interfaces">
 				<h3>Software Interfaces</h3>
 				<ul>
-					<li>Front-end technologies: html and css</li>
+					<li>Front-end technologies: html, css, javascript</li>
 					<li>Back-end technologies: php</li>
 					<li>Database software: MySQL</li>
 					<li>Testing software: XAMPP</li>
@@ -100,7 +101,7 @@
 			</section>
 			
 			
-			<section id="preformance">
+			<section id="performance">
 				<h3>Performance Requirements</h3>
 				<ul>
 					<li>The application should update the interface on interaction within 2 seconds.</li>
@@ -109,12 +110,6 @@
 			</section>
 		
 		
-			<section id="safety">
-				<h3>Safety Requirements</h3>
-				<ul>
-					<li>Weekly backups of the databases.</li>
-				</ul>
-			</section>
 		
 		
 			<section id="quality">
@@ -122,6 +117,7 @@
 				<ul>
 					<li>Usability: The interface should be easy to learn and navigate from a general user standpoint.</li>
 					<li>Reliability: With its educational nature, the information provided by the application must be reliable.</li>
+					<li>Data Validity: The data provided in forms by users should be validated and provide information about any possible data error or internal errors to the user.</li>
 				</ul>
 			</section>
 		</section>
